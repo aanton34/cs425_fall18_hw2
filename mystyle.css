@@ -1,0 +1,117 @@
+body {
+    background-color: grey;
+    font-size: 20px;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(83, 81, 81);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    border-radius: 5px;
+    top: 0;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
+.active {
+    background-color: #4CAF50;
+}
+#myBtn {
+    position: relative;
+    float: right;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#myBtn:hover {
+    background-color: #555;
+}
+.fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 45px;
+    left: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}  
+.fa:hover {
+    opacity: 0.5;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.fa-skype {
+    background: #00aff0;
+    color: white;
+}
+/* These are for Contact Us Webpage */
+* {
+    box-sizing: border-box;
+}
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 35%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+label{
+    font-size: 18px;
+}
+textarea{
+    height: 170px;
+}
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+  
