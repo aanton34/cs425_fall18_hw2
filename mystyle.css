@@ -1,5 +1,5 @@
 body {
-    background-image: url("photograph.jpg");
+    background-image: url("background/photograph.jpg");
     background-color: grey; /* Used if the image is not available */
     background-repeat: no-repeat;
     position: relative;
@@ -24,7 +24,7 @@ nav{
     position: relative;
     overflow: hidden;
 }
-.sticky {
+.topnav.sticky {
     position: sticky;
     top: 0;
     overflow: hidden;
@@ -72,7 +72,7 @@ ul {
 @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive li #icon {
-        display: 
+        display: block;
     }
     .topnav.responsive li a {
         float: none;
@@ -247,4 +247,46 @@ textarea{
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
+}
+/* Home Page */
+/* Position the image container (needed to position the left and right arrows) */
+.photoContainer {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
 } 
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+.galleryRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Ten columns side by side */
+.galleryColumn {
+    float: left;
+    width: 10%;
+}
+/* Add a transparency effect for thumnbail images */
+.cursor {
+    opacity: 0.6;
+}
+.active, .cursor:hover {
+    opacity: 1;
+}
+img.cursor{
+    width: 100%;
+    height: 75px;
+}
+.mySlides img{
+    width: 100%;
+    height: auto;
+}
