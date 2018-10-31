@@ -4,6 +4,8 @@
     <title>JD Photography_Home Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HW2, CS425, Fall2018, HTML, Home Page">
+	<meta name="author" content="Antonia Antoniou">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
@@ -11,17 +13,23 @@
     <header>
         <h1>JD Photography</h1>
     </header> 
-    <nav>
+    <nav id="navbar" class="topnav">
         <ul>
-            <li><a href="home_page.html">Home Page</a></li>
+            <li><a href="home_page.html" class="active">Home Page</a></li>
             <li><a href="about_us.html">About Us</a></li>
             <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="#" id="icon" class="fa fa-bars" onclick="myFunction()"></a></li>
         </ul>
     </nav>
     <div class="container">   
         <section>
             <h3>Company's Vision</h3>
-            <p>My company's vision is ....</p>
+            <p>
+                Traveling throughout the year to pursue the farthest expanses of Earth, 
+                working to capture landscapes that will inspire people to consider their 
+                relationship with Nature, while promoting the preservation of wild places 
+                everywhere.
+            </p>
         </section>
         <section>
             <h3>Previous Work - Photo Gallery</h3>
@@ -29,14 +37,34 @@
         </section>
         <section>
             <h3>Customers' Reviews</h3>
-            <p>....</p>
+            <div class="row1">
+                <div class="column1">
+                    <img src="man.png" alt="Avatar" class="avatar">
+                    <p>"I want to thank you so much for the wonderful photos. I loved how you captured 
+                        so many special moments and the beauty of Nature."</p>
+                </div>
+                <div class="column1">
+                    <img src="woman.png" alt="Avatar" class="avatar">
+                    <p>"Thank you! Thank you! Thank you! We couldn' t be more pleased with the photos. 
+                        Peter and I feel as if we 've just acquired treasured museum pieces."</p>
+                </div>
+                <div class="column1">
+                    <img src="woman.png" alt="Avatar" class="avatar">
+                    <p>"Thank you for your wonderful work and for your patience throughout our cooperation. 
+                        The photographs are perfect. I appreciate the professionalism and style you brought 
+                        to your work."</p>
+                </div>
+                <div class="column1">
+                    <img src="man.png" alt="Avatar" class="avatar">
+                    <p>"The photos are just beautiful and really amazing. You did such a wonderful job."</p>
+                </div>
+            </div>
         </section>
     </div>  
     <footer>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-skype"></a>
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>  
     </footer>
     <script>
@@ -44,6 +72,25 @@
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
+        }
+        //Sticky Navigation Bar
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
     </script>
 </body>

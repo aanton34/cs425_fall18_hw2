@@ -1,59 +1,157 @@
 body {
-    background-color: grey;
+    background-image: url("photograph.jpg");
+    background-color: grey; /* Used if the image is not available */
+    background-repeat: no-repeat;
+    position: relative;
     font-size: 20px;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
     color: white;
     text-align: center;
+    font-size: 2.5em;
+}
+footer{
+    padding-top: 15px;
+}
+nav{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(83, 81, 81);
+    /* Add a black background color to the top navigation */
+    background-color: rgb(44, 43, 43);
     position: -webkit-sticky; /* Safari */
     position: sticky;
     border-radius: 5px;
     top: 0;
 }
-li {
+/* Style the links inside the navigation bar */
+.topnav li a {
     float: left;
-}
-li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a:hover:not(.active) {
-    background-color: #4CAF50;
+/* Change the color of navigation links on hover */
+.topnav li a:hover:not(.active) {
+    background-color: #3B5998;
 }
+/* Add an active class to highlight the current page */
 .active {
-    background-color: #4CAF50;
+    background-color: #3B5998;
 }
+/* Responsive Navigation Bar */
+.topnav #icon {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .topnav li a:not(.active) {display: none;}
+    .topnav li a#icon {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive li #icon {
+        display: 
+    }
+    .topnav.responsive li a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+/* Avatar Icons for Costumers' Reviews */
+.avatar {
+    vertical-align: middle;
+    width: 35%;
+    height: auto;
+    border-radius: 50%;
+}
+/* Create four equal columns that floats next to each other for Home Page */
+.row1 {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+/* Responsive Bio Photo */
+#bioPhoto.responsivePhoto{
+    width: 100%;
+    height: auto;
+    padding-top: 33%;
+}
+/* Create two equal columns that floats next to each other for About Us Page */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: justify;
+}
+/* Clear floats after the columns */
+.row:after, .row1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - makes all the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, .column1 {
+        width: 100%;
+    }
+}
+/* Back - to - Top Button */
 #myBtn {
-    position: relative;
-    float: right;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
     z-index: 99;
     font-size: 14px;
     border: none;
     outline: none;
-    background-color: #4CAF50;
+    background-color: #3B5998;
     color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
 }
+/* Change the color of links on hover */
 #myBtn:hover {
     background-color: #555;
 }
 .fa {
+    bottom: 10px;
     padding: 15px;
     font-size: 15px;
     width: 45px;
-    left: 30px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -65,18 +163,17 @@ li a:hover:not(.active) {
 .fa-facebook {
     background: #3B5998;
     color: white;
+    left: 10px;
 }
 .fa-twitter {
     background: #55ACEE;
     color: white;
+    left: 60px;
 }
 .fa-instagram {
     background: #125688;
     color: white;
-}
-.fa-skype {
-    background: #00aff0;
-    color: white;
+    left: 110px;
 }
 /* These are for Contact Us Webpage */
 * {
@@ -84,7 +181,29 @@ li a:hover:not(.active) {
 }
 /* Style inputs */
 input[type=text], select, textarea {
-    width: 35%;
+    width: 65%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=date]{
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=time]{
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=email]{
+    width: 65%;
     padding: 12px;
     border: 1px solid #ccc;
     margin-top: 6px;
@@ -92,14 +211,26 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #3B5998;
+    border-radius: 5px;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
 }
+input[type=reset] {
+    background-color: #3B5998;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+input[type=reset]:hover {
+    opacity: 0.8;
+}
 input[type=submit]:hover {
-    background-color: #45a049;
+    opacity: 0.8;
 }
 label{
     font-size: 18px;
@@ -108,10 +239,12 @@ textarea{
     height: 170px;
 }
 /* Style the container/contact section */
-.container {
+.container, .row {
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
+    width: 65%;
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
-}
-  
+} 

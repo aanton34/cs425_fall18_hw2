@@ -4,6 +4,8 @@
     <title>JD Photography_Contact Us</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HW2, CS425, Fall2018, HTML, Contact Us">
+	<meta name="author" content="Antonia Antoniou">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
@@ -11,34 +13,38 @@
     <header>
         <h1>JD Photography</h1>
     </header> 
-    <nav>
+    <nav id="navbar" class="topnav">
         <ul>
             <li><a href="home_page.html">Home Page</a></li>
             <li><a href="about_us.html">About Us</a></li>
-            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="contact_us.html" class="active">Contact Us</a></li>
+            <li><a href="#" id="icon" class="fa fa-bars" onclick="myFunction()"></a></li>
         </ul>
     </nav> 
     <div class="container">
         <h3>Contact Us</h3>
         <form action="/action_page.php">
             <label for="fname">First Name:</label><br>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..."><br>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..." required><br>
             <label for="lname">Last Name:</label><br>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..."><br>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..." required><br>
             <label for="email">Email:</label><br>
-            <input type="text" id="email" name="emailaddress" placeholder="Your email address..."><br>
+            <input type="email" id="email" name="emailaddress" placeholder="Your email address..." required><br>
             <label for="subject">Email Subject:</label><br>
-            <input type="text" id="subject" name="emailsubject" placeholder="Email Subject..."><br>
+            <input type="text" id="subject" name="emailsubject" placeholder="Email Subject..." required><br>
             <label for="subject">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Tell us your opinion..."></textarea><br>
+            <textarea id="message" name="message" placeholder="Tell us your opinion..." required></textarea><br>
+            <label for="meeting">Appointment (select date & time only if you want to arrange an appointment):</label><br>
+            <input type="date" name="appointment">
+            <input type="time" name="appt-time" max="18:00"><br>
             <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
         </form>
     </div>
     <footer>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-skype"></a>
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>  
     </footer>
     <script>
@@ -47,6 +53,25 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+        //Sticky Navigation Bar
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        } 
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        } 
     </script>
 </body>
 </html>
