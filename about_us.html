@@ -23,7 +23,7 @@
     </nav> 
     <div class="row">
         <div class="column">
-            <img src="bio_photo.jpg" alt="Photographer Photo" id="bioPhoto" class="responsivePhoto">
+            <img src="bioPhoto/bio_photo.jpg" alt="Photographer Photo" id="bioPhoto" class="responsivePhoto">
         </div>
         <div class="column">
             <p>
@@ -62,14 +62,14 @@
             document.documentElement.scrollTop = 0;
         }
         //Sticky Navigation Bar
-        window.onscroll = function() {myFunction()};
+        window.onscroll = function() {navFunction()};
         var navbar = document.getElementById("navbar");
         var sticky = navbar.offsetTop;
-        function myFunction() {
+        function navFunction() {
             if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
+                navbar.className += " sticky";
             } else {
-                navbar.classList.remove("sticky");
+                navbar.className = "topnav";
             }
         }
         function myFunction() {
