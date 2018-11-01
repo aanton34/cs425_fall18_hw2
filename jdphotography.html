@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>JD Photography_Home Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HW2, CS425, Fall2018, HTML, Home Page">
-	<meta name="author" content="Antonia Antoniou">
+    <meta name="author" content="Antonia Antoniou">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 </head>
+
 <body>
+    <a name="top"></a>
     <header>
         <h1>JD Photography</h1>
-    </header> 
-    <nav id="navbar" class="topnav">
+    </header>
+    <nav id="navbar" class="topnav sticky">
         <ul>
-            <li><a href="jdphotography.html" class="active">Home Page</a></li>
+            <li><a href="jdphotography.html">Home Page</a></li>
             <li><a href="about_us.html">About Us</a></li>
             <li><a href="contact_us.html">Contact Us</a></li>
-            <li><a href="#" id="icon" class="fa fa-bars" onclick="myFunction()"></a></li>
         </ul>
     </nav>
-    <div class="container">   
-        <section>
+    <div class="container">
+        <div class="section1">
             <h3>Company's Vision</h3>
             <p>
-                Traveling throughout the year to pursue the farthest expanses of Earth, 
-                working to capture landscapes that will inspire people to consider their 
-                relationship with Nature, while promoting the preservation of wild places 
+                Traveling throughout the year to pursue the farthest expanses of Earth,
+                working to capture landscapes that will inspire people to consider their
+                relationship with Nature, while promoting the preservation of wild places
                 everywhere.
             </p>
-        </section>
-        <section>
+        </div>
+        <div class="section2">
             <h3>Previous Work - Photo Gallery</h3>
-            <div class="photoContainer">
-                <div class="mySlides"><img src="gallery/photo0.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo1.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo2.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo3.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo4.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo5.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo6.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo7.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo8.jpg"></div>
-                <div class="mySlides"><img src="gallery/photo9.jpg"></div>
-                <div class="galleryRow">
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo0.jpg" onclick="currentSlide(1)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo1.jpg" onclick="currentSlide(2)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo2.jpg" onclick="currentSlide(3)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo3.jpg" onclick="currentSlide(4)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo4.jpg" onclick="currentSlide(5)"></div>    
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo5.jpg" onclick="currentSlide(6)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo6.jpg" onclick="currentSlide(7)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo7.jpg" onclick="currentSlide(8)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo8.jpg" onclick="currentSlide(9)"></div>
-                    <div class="galleryColumn"><img class="cursor" src="gallery/photo9.jpg" onclick="currentSlide(10)"></div>
+            <div class="galleryRow">
+                <div class="galleryColumn">
+                    <img src="gallery/spring0.jpg" class="gallery">
+                    <img src="gallery/spring1.jpg" class="gallery">
+                    <img src="gallery/nothern_lights2.jpg" class="gallery">
+                    <img src="gallery/spring3.jpg" class="gallery">
+                    <img src="gallery/magical6.jpg" class="gallery">
+                </div>
+                <div class="galleryColumn">
+                    <img src="gallery/spring4.jpg" class="gallery">
+                    <img src="gallery/spring2.jpg" class="gallery">
+                    <img src="gallery/nothern_lights0.jpg" class="gallery">
+                    <img src="gallery/nothern_lights1.jpg" class="gallery">
+                    <img src="gallery/magical7.jpg" class="gallery">
+                </div>
+                <div class="galleryColumn">
+                    <img src="gallery/magical0.jpg" class="gallery">
+                    <img src="gallery/magical4.jpg" class="gallery">
+                    <img src="gallery/winter4.jpg" class="gallery">
+                    <img src="gallery/winter3.jpg" class="gallery">
+                    <img src="gallery/magical1.jpg" class="gallery">
+                </div>
+                <div class="galleryColumn">
+                    <img src="gallery/magical5.jpg" class="gallery">
+                    <img src="gallery/magical3.jpg" class="gallery">
+                    <img src="gallery/magical2.jpg" class="gallery">
+                    <img src="gallery/winter2.jpg" class="gallery">
+                    <img src="gallery/winter1.jpg" class="gallery">
                 </div>
             </div>
-        </section>
-        <section>
+        </div>
+        <div class="section3">
             <h3>Customers' Reviews</h3>
             <div class="row1">
                 <div class="column1">
                     <img src="avatars/man.png" alt="Avatar" class="avatar">
-                    <p>"I want to thank you so much for the wonderful photos. I loved how you captured 
+                    <p>"I want to thank you so much for the wonderful photos. I loved how you captured
                         so many special moments and the beauty of Nature."</p>
                 </div>
                 <div class="column1">
                     <img src="avatars/woman.png" alt="Avatar" class="avatar">
-                    <p>"Thank you! Thank you! Thank you! We couldn' t be more pleased with the photos. 
+                    <p>"Thank you! Thank you! Thank you! We couldn' t be more pleased with the photos.
                         Peter and I feel as if we 've just acquired treasured museum pieces."</p>
                 </div>
                 <div class="column1">
                     <img src="avatars/woman.png" alt="Avatar" class="avatar">
-                    <p>"Thank you for your wonderful work and for your patience throughout our cooperation. 
-                        The photographs are perfect. I appreciate the professionalism and style you brought 
+                    <p>"Thank you for your wonderful work and for your patience throughout our cooperation.
+                        The photographs are perfect. I appreciate the professionalism and style you brought
                         to your work."</p>
                 </div>
                 <div class="column1">
@@ -82,61 +91,14 @@
                     <p>"The photos are just beautiful and really amazing. You did such a wonderful job."</p>
                 </div>
             </div>
-        </section>
-    </div>  
+        </div>
+    </div>
     <footer>
         <a href="https://www.facebook.com" class="fa fa-facebook"></a>
         <a href="https://twitter.com/" class="fa fa-twitter"></a>
         <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>  
+        <a href="#top" class="back-to-top">Top</a>
     </footer>
-    <script>
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-        //Sticky Navigation Bar
-        window.onscroll = function() {navFunction()};
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        function navFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.className += " sticky";
-            } else {
-                navbar.className = "topnav";
-            }
-        }
-        function myFunction() {
-            var x = document.getElementById("navbar");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-    </script>
 </body>
+
 </html>
